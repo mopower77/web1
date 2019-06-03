@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>게임선택</title>
+
+    <style>
+        body
+        {
+            background-color: gray;
+            margin: 0;
+        }
+
+        #Top
+        {
+            position: relative;
+            text-align: center;
+        }
+
+        #Top_Back
+        {
+            color: white;
+            position: absolute;
+            left: 1%;
+            font-size:  30px;
+        }
+
+        #Top_Center{
+            color: white;
+            position: absolute;
+            font-size:  30px;
+        }
+
+        #Top_right{
+            color: white;
+            position: absolute;
+            right: 0%;
+            font-size:  30px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="Top">
+            <span id ='Top_Back'>뒤로가기</span>
+            <span id ='Top_Center'>게임선택</span>
+            <span id ='Top_right'>메뉴</span>
+    </div>
+
+    <div>
+        <br>
+        <br>
+        <img  id="club_img" style="width: 50px; height: 50px;position: relative; left: 10px;" src="/resources/emblem01.png">  
+        <span id="club_name" style="position: relative ; left: 20px; top: -15px;font-size: 30px" >클럽명</span>
+        <ui style="position: absolute; right: 0px; font-size: 30px;">
+                <input  style="font-size: 30px" type="button" value="마이뱅크" onclick="OpenPage('MyBank')">
+                <input  style="font-size: 30px" type="button" value="메시지함"onclick="OpenPage('Message')">
+                <input  style="font-size: 30px" type="button" value="상점"onclick="OpenPage('ItemShop')">
+                <input  style="font-size: 30px" type="button" value="베팅내역"onclick="OpenPage('BettingHistory')">
+                <input  style="font-size: 30px" type="button" value="추천필터">
+        </ui>
+    </div>
+
+    <div>
+        <ui>
+            <input style="font-size: 30px" type="button" value="크로스" onclick="Cross('Cross')">
+            <input style="font-size: 30px" type="button" value="승무패"onclick="WindrawLose('WinDrawLose')">
+            <input style="font-size: 30px" type="button" value="핸디캡/언더오버"onclick="HandiOver('HandiOver')">
+            <input style="font-size: 30px" type="button" value="스페셜"onclick="Special('Special')">
+            <input style="font-size: 30px" type="button" value="라이브"onclick="Live('Live')">
+        </ui>
+    </div>
+
+    <div id="Title" style="text-align: center; font-size: 30px; margin: 10px;">
+        가나다라
+    </div>
+
+    <div id="scroll_Field">
+
+
+    </div>
+
+
+    <script src="../js/Hudtop.js"></script>
+    <script src="../js/GameSelection.js"></script>
+    <script>
+        OpenGameSelection();
+    </script>
+    
+</body>
+</html>

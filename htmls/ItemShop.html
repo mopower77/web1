@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메시지함</title>
+</head>
+<body>
+        <input  style="font-size: 30px" type="button" value="뒤로가기" onclick="BackBtn()">
+
+        <script src="../js/Hudtop.js"></script>
+
+
+        <input type="button" value="추가" onclick="add_div()"><br/>
+
+<div id="room_type">
+
+<div class="form-group">
+
+	<label for="image">제목</label>
+
+	<input type="text" id="title" name="title" class="form-control" ></input>
+
+</div>
+
+<input type="button" value="삭제" onclick="remove_div(this)">
+
+</div>
+
+<div id="field"></div>
+
+
+<script type="text/javascript">
+
+    function add_div(){
+    
+        var div = document.createElement('div');
+    
+    
+    
+        div.innerHTML = document.getElementById('room_type').innerHTML;
+    
+        document.getElementById('field').appendChild(div);
+    
+    }
+    
+    
+    
+    function remove_div(obj){
+    
+    document.getElementById('field').removeChild(obj.parentNode);
+    
+    }
+    
+    </script>
+
+</body>
+</html>
